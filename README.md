@@ -14,6 +14,9 @@ yarn add fs-extra
 ## Key changes
 
 No longer use hardcoding into the variables such as RPC URL or private key, store within a .env folder
+
 Added .gitignore to include .env and .encryptedKey.json
+
 Added encryptKey.js script that encrypts the key based off the .env variables
+
 If user wills to remove passwords even in an .env file (in case of physical theft or local access etc) environemnt variables can be set up on the terminal prior to running node. Windows $env:PRIVATE_KEY_PASSWORD="Password"; node deploy.js MacOS/Linux: export PRIVATE_KEY_PASSWORD=Password && node deploy.js
